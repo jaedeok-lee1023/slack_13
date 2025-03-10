@@ -50,7 +50,7 @@ def main():
             f"\n"
             f":k체크: *메뉴와 원산지는 식자재 수급 사정에 따라 변경 될 수 있습니다.*\n"
             f"\n"
-            f"(Click) (Click) :point_right: <https://docs.google.com/spreadsheets/d/1p5loEO1j5kxUAvK6TKV-Muyc8LUYlPsq0eanzHELSQs/edit?gid=156845326#gid=156845326|평택클러스터 주간 식단표>*\n\n"
+            f"* (Click) (Click) :point_right: <https://docs.google.com/spreadsheets/d/1p5loEO1j5kxUAvK6TKV-Muyc8LUYlPsq0eanzHELSQs/edit?gid=156845326#gid=156845326|평택클러스터 주간 식단표>*\n\n"
             f"\n"
             f"감사합니다. 😊\n"
             f"\n"
