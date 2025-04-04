@@ -53,7 +53,7 @@ def main():
             f"* (Click) :point_right: <https://docs.google.com/spreadsheets/d/1p5loEO1j5kxUAvK6TKV-Muyc8LUYlPsq0eanzHELSQs/edit?gid=156845326#gid=156845326|평택클러스터 다음주 식단표>*\n\n"
             f"\n"
             f"이번주 식단표는 아래 링크에서 확인 가능합니다.\n"
-            f"* <https://sites.google.com/view/kurly-logistics-recruit/%EC%A3%BC%EA%B0%84-%EC%8B%9D%EB%8B%A8%ED%91%9C-%EC%95%88%EB%82%B4/%ED%8F%89%ED%83%9D%EC%84%BC%ED%84%B0-%EC%A3%BC%EA%B0%84-%EB%A9%94%EB%89%B4%ED%91%9C-%EC%95%88%EB%82%B4?authuser=0|평택클러스터 이번주 식단표>*\n"
+            f"* (Click) :point_right: <https://sites.google.com/view/kurly-logistics-recruit/%EC%A3%BC%EA%B0%84-%EC%8B%9D%EB%8B%A8%ED%91%9C-%EC%95%88%EB%82%B4/%ED%8F%89%ED%83%9D%EC%84%BC%ED%84%B0-%EC%A3%BC%EA%B0%84-%EB%A9%94%EB%89%B4%ED%91%9C-%EC%95%88%EB%82%B4?authuser=0|평택클러스터 이번주 식단표>*\n"
             f"\n"
             f"\n"
             f"감사합니다. 😊\n\n"
