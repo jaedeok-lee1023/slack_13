@@ -30,12 +30,6 @@ HOLIDAYS = {
 
 # 📄 식단표 스프레드시트
 SPREADSHEET_ID = "11GCv7_yIem_b_cZfRLztHHce2_C630MdfdVdt4OalT8"
-SITE_URL = (
-    "https://sites.google.com/view/kurly-logistics-recruit/"
-    "%EC%A3%BC%EA%B0%84-%EC%8B%9D%EB%8B%A8%ED%91%9C-%EC%95%88%EB%82%B4/"
-    "%ED%8F%89%ED%83%9D%EC%84%BC%ED%84%B0-%EC%A3%BC%EA%B0%84-%EB%A9%94%EB%89%B4%ED%91%9C-"
-    "%EC%95%88%EB%82%B4?authuser=0"
-)
 
 # 📆 오늘 날짜 가져오기
 today = datetime.date.today()
@@ -69,7 +63,7 @@ def get_week_info_from_gas(week_number):
     """
     Apps Script 웹앱에 특정 주차 정보를 물어본다.
     반환: {"url": ..., "image_bytes": bytes|None, "image_filename": str|None}
-    웹앱 호출이 실패하거나 아직 해당 주차 탭이 없으면 url은 기본 링크, image는 None.
+    웹앱 호출이 실패하거나 아직 해당 주차 탭이 없으면 url은 스프레드시트 기본 링크, image는 None.
     """
     fallback = {
         "url": f"https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}/edit",
@@ -133,7 +127,11 @@ def main():
     this_week, next_week = get_week_numbers(today)
     print(f"📅 기준일: {today_str} / 이번주: {this_week}주차 / 다음주: {next_week}주차")
 
+    # ✅ 이번주 정보도 다음주와 동일하게 GAS 웹앱에서 조회 (정적 SITE_URL 완전히 제거)
+    this_week_info = get_week_info_from_gas(this_week)
     next_week_info = get_week_info_from_gas(next_week)
+
+    this_week_sheet_url = this_week_info["url"]
     next_week_sheet_url = next_week_info["url"]
 
     for cluster in clusters:
@@ -149,7 +147,7 @@ def main():
             f"*<{next_week_sheet_url}|직원식당 다음주 식단표>* 공유 드립니다.\n"
             f":k체크: *메뉴와 원산지는 식자재 수급 사정에 따라 변경 될 수 있습니다.*\n\n"
             f"\n"
-            f"이번주 식단표는 <{SITE_URL}|스프레드 시트>에서 확인 부탁드립니다.\n"
+            f"이번주 식단표는 <{this_week_sheet_url}|스프레드 시트>에서 확인 부탁드립니다.\n"
             f"\n"
             f"감사합니다. 😊\n\n"
         )
